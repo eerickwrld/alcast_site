@@ -1,0 +1,330 @@
+{
+  "common": {
+	"newsletter": "Subscribe to our newsletter and don't miss our content!",
+	"button": "Subscribe",
+	"newsletter_success_title": "Subscription confirmed!",
+	"newsletter_success_message": "Your email has been successfully added to our newsletter!",
+	"newsletter_error_title": "Subscription error",
+	"newsletter_error_message": "We were unable to process your subscription. Please try again.",
+	"newsletter_try_again": "Try again",
+	"newsletter_sending": "Sending...",
+	"newsletter_email_required": "Enter a valid email",
+	"solution": "Alcast has the ideal solution for your segment!",
+	"budgetCta": "Request a quote",
+	"products": "Products",
+	"aluminumCta": "Aluminum tailored for your industry",
+	"quote": "Request a quote",
+	"missao": "Mission",
+	"productSegments": "Where is this material used?",
+	"visao": "Vision",
+	"valores": "Values",
+	"category": "Category",
+	"articleByCategory": "Alcast blog articles by category",
+	"units": "Units",
+	"notFoundArticles": "No articles found",
+	"notFoundArticlesDescription": "We will have new content soon!",
+	"answeringTo": "Respondiendo al comentario de {name}",
+	"cancel": "Cancel",
+	"all": "All",
+	"errors": {
+	  "mandatory": "Field is required."
+	},
+	"loading": "Loading"
+  },
+  "home": {
+	"metadata": {
+	  "title": "",
+	  "description": ""
+	},
+	"hero": {
+	  "buttonText": "Learn more"
+	},
+	"products": {
+	  "title": "Our products",
+	  "subtitle": "Discover our full portfolio of aluminum products"
+	},
+	"blog": {
+	  "title": "Blog and informative content",
+	  "subtitle": "Stay up to date with the latest in the aluminum industry",
+	  "buttonText": "Visit our blog"
+	},
+	"segments": {
+	  "title": "Segments",
+	  "subtitle": "We serve various sectors of the industry"
+	},
+	"certificates": {
+	  "title": "We are a certified company committed to the environment"
+	},
+	"budget": {
+	  "title": "Use aluminum in your production!",
+	  "buttonText": "Request a quote"
+	}
+  },
+  "footer": {
+	"tagline": "Alcast is innovation and quality in aluminum.",
+	"copyright": " Alcast. All Rights Reserved.",
+	"newsletter": {
+	  "title": "Subscribe to our newsletter",
+	  "placeholder": "email@email.com",
+	  "button": "Subscribe"
+	},
+	"navigation": {
+	  "title": "Navigation",
+	  "home": "Home",
+	  "about": "About us",
+	  "segments": "Segments",
+	  "products": "Products",
+	  "blog": "Blog",
+	  "quote": "Quote"
+	},
+	"services": {
+	  "title": "Services",
+	  "privacy": "Privacy Policy",
+	  "invoice": "2nd Copy of Invoice (Business)",
+	  "catalog": "Catalog",
+	  "careers": "Work with us",
+	  "ethics": "Code of Ethics and Conduct"
+	},
+	"contact": {
+	  "country": "Brazil",
+	  "city": "Francisco Beltrão/PR",
+	  "phone": "+55 46 3520.8888",
+	  "address1": "Estrada Municipal, Estr. Seção",
+	  "address2": "Jacaré, s/n - KM 05 - Rural Area I",
+	  "address3": "Francisco Beltrão - PR, 85601-020"
+	},
+	"policies": {
+	  "quality": {
+		"title": "Quality Policy",
+		"description": "Achieve excellence in our actions, with quality, safety, and profitability. (At Alcast, excellence means, among other practices, full commitment to meeting applicable requirements and continuous improvement of the QMS)."
+	  },
+	  "environmental": {
+		"title": "Environmental Policy",
+		"description": "To be nationally recognized and by the community in which it operates as a company committed to environmental protection and the prevention of negative environmental impacts, ensuring business sustainability and profitability, meeting legal requirements, and continuously improving its environmental management system."
+	  }
+	}
+  },
+  "segments": {
+	"metadata": {
+	  "title": "Segments | Alcast",
+	  "description": "Discover the various sectors served by Alcast, a leader in the aluminum industry."
+	},
+	"cta": {
+	  "title": "Alcast has the ideal solution for your segment!",
+	  "button": "Request a quote"
+	}
+  },
+  "blog": {
+	"metadata": {
+	  "title": "Blog | Alcast",
+	  "description": "The most relevant content in our field!"
+	},
+	"comments": {
+	  "empty": "No comments yet. Be the first to comment!",
+	  "loading": "Loading comments...",
+	  "title": "Comments",
+	  "reply": "Reply",
+	  "show": "Show answers ({count})",
+	  "hide_comments": "Hide replies",
+	  "input": "Write your comment...",
+	  "name": "Name (required)",
+	  "email": "Email (will not be public)",
+	  "buttonLoading": "Sending...",
+	  "button": "Post comment"
+	}
+  },
+  "contact": {
+	"metadata": {
+	  "title": "",
+	  "description": ""
+	},
+	"title": "Get in touch via form, social media or address",
+	"privacy_policy": "Privacy Policy",
+	"privacy_content": "You can learn more about how we handle your personal data and your rights by reviewing our",
+	"form": {
+	  "name": "Name",
+	  "email": "Email",
+	  "phone": "Phone",
+	  "sector": "Department you would like to contact",
+	  "submitting": "Enviando",
+	  "sectors": {
+		"placeholder": "Select",
+		"comercial": "Commercial",
+		"finance": "Financial",
+		"logistic": "Logistics",
+		"marketing": "Marketing",
+		"others": "Others",
+		"rh": "Human Resources"
+	  },
+	  "newsletter": "Would you like to receive emails from Alcast about products and services? You can unsubscribe at any time.",
+	  "message": "Message",
+	  "yes": "Yes",
+	  "no": "No",
+	  "success": {
+        "title": "Message sent successfully!",
+        "description": "Thank you for your message. Our team will review it and respond shortly."
+      },
+      "errors": {
+        "title": "Error sending message",
+        "submitError": "We couldn't send your message. Please try again later.",
+        "invalidPhone": "Invalid phone number"
+      }
+	},
+	"button": "Send"
+  },
+  "budget": {
+	"metadata": {
+	  "title": "Quote | Alcast",
+	  "description": "Request your personalized quote."
+	},
+	"products": {
+	  "bobinas": "Coils",
+	  "chapas-lisas": "Sheets",
+	  "chapas-lavradas": "Trend Plates",
+	  "discos-naturais": "Discs",
+	  "telha-trapezoidal": "Corrugated roof sheet",
+	  "telha-ondulada": "Trapezoidal roof sheet"
+	},
+	"fields": {
+	  "placeholder": "Enter the value",
+	  "quantityWeight": "kg",
+	  "quantityUnits": "units",
+	  "quantity": "Quantity",
+	  "weight": "Weight",
+	  "width": "Width",
+	  "length": "Length",
+	  "diameter": "Diameter",
+	  "outerDiameter": "Outer Diameter",
+	  "thickness": "Thickness",
+	  "alloys": "Alloy",
+	  "alloy": "Alloy",
+	  "tempers": "Temper",
+	  "temper": "Temper",
+	  "measureType": "Specified quantity",
+	  "totalWidth": "Total Width",
+	  "waveStep": "Wave Step",
+	  "spaceUtilizationSimpleCoverage": "Usable Space (Single Coverage)",
+	  "spaceUtilizationDoubleCoverage": "Usable Space (Double Coverage)"
+	},
+	"product_selection": {
+	  "title": "1. Select the product"
+	},
+	"parameters": {
+	  "title": "2. Define product parameters",
+	  "empty": "Select a product to see parameters."
+	},
+	"quantity": {
+	  "title": "3. Define the quantity"
+	},
+	"resume": {
+	  "title": "Quote Summary",
+	  "items": {
+		"title": "Items in the quote:"
+	  },
+	  "userInformations": {
+		"title": "Your information to send the quote",
+		"personalData": "Personal Data",
+		"companyData": "Company Data",
+		"clearButton": "Clear quotes",
+		"submitButton": "Send quote",
+		"errors": {
+		  "mandatory": "{name} field is required."
+		},
+		"fields": {
+		  "segments": {
+			"comercial": "Commercial",
+			"financeiro": "Finance",
+			"logistica": "Logistics",
+			"marketing": "Marketing",
+			"rh": "Human Resources",
+			"outros": "Other"
+		  },
+		  "placeholder": "Select",
+		  "primeiroNome": "First Name",
+		  "sobreNome": "Last Name",
+		  "email": "Email",
+		  "telefone": "Phone",
+		  "empresa": "Company",
+		  "segmento": "Segment",
+		  "uf": "State",
+		  "lgpdConsent": "I authorize the use of my personal data for marketing purposes."
+		}
+	  },
+	  "actions": {
+		"add": {
+		  "feedback": {
+			"error": "There are no items in the quote to send. Please add at least one product.",
+			"success": "Item successfully added to the quote!"
+		  }
+		},
+		"clear": {
+		  "confirmation": "Are you sure you want to remove this item?",
+		  "feedback": {
+			"success": "Item successfully removed!",
+			"error": "Product not found. Please try again."
+		  }
+		},
+		"clearAll": {
+		  "confirmation": "Are you sure you want to clear all quotes?",
+		  "feedback": {
+			"success": "All items have been removed from the quote."
+		  }
+		},
+		"submit": {
+		  "feedback": {
+			"success": "Quote sent successfully! Thank you for your request.",
+			"error": "Error sending quote. Please try again."
+		  }
+		}
+	  }
+	}
+  },
+  "aboutUs": {
+	"metadata": {
+	  "title": "About Us | Alcast",
+	  "description": "Learn about Alcast's history, mission, vision, and values, a leader in the aluminum sector."
+	}
+  },
+  "esg": {
+	"metadata": {
+	  "title": "ESG | Alcast",
+	  "description": "Discover Alcast's sustainability and social responsibility initiatives."
+	}
+  },
+  "lme": {
+	"metadata": {
+	  "title": "LME - London Metal Exchange | Alcast",
+	  "description": "Follow daily metal prices at the LME (London Metal Exchange) and Dollar exchange rate."
+	}
+  },
+  "products": {
+	"metadata": {
+	  "title": "Aluminum Coils | Alcast",
+	  "description": "Aluminum coils produced by continuous casting and cold rolling, with a final width of up to 1350 mm."
+	},
+	"chapas-lavradas": {
+	  "metadata": {
+		"title": "Patterned Aluminum Sheets | Alcast",
+		"description": "Aluminum sheets embossed with anti-slip features, ideal for stairs, floors, and ramps."
+	  }
+	},
+	"chapas-lisas": {
+	  "metadata": {
+		"title": "Flat Aluminum Sheets | Alcast",
+		"description": "Flat aluminum sheets with guaranteed flatness and thickness, produced with a natural finish."
+	  }
+	},
+	"discos-naturais": {
+	  "metadata": {
+		"title": "Natural Aluminum Discs | Alcast",
+		"description": "Aluminum discs for the production of household utensils, manufactured with a modern process ensuring mechanical properties."
+	  }
+	},
+	"telhas": {
+	  "metadata": {
+		"title": "Aluminum Roofing Sheets | Alcast",
+		"description": "Lightweight and durable aluminum roofing sheets with excellent thermal reflectivity and corrosion resistance for long-lasting roofs."
+	  }
+	}
+  }
+}

@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "docker-build",
+			"label": "docker-build",
+			"platform": "node",
+			"dockerBuild": {
+				"dockerfile": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php/Dockerfile",
+				"context": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php",
+				"pull": true
+			},
+			"node": {
+				"package": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php/package.json"
+			}
+		},
+		{
+			"type": "docker-run",
+			"label": "docker-run: release",
+			"dependsOn": [
+				"docker-build"
+			],
+			"platform": "node",
+			"node": {
+				"package": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php/package.json"
+			}
+		},
+		{
+			"type": "docker-run",
+			"label": "docker-run: debug",
+			"dependsOn": [
+				"docker-build"
+			],
+			"dockerRun": {
+				"env": {
+					"DEBUG": "*",
+					"NODE_ENV": "development"
+				}
+			},
+			"node": {
+				"package": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php/package.json",
+				"enableDebugging": true
+			}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Filament\Resources\Configurations\Pages;
+
+use App\Filament\Resources\Configurations\ConfigurationResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
+use Filament\Resources\Pages\EditRecord;
+
+class EditConfiguration extends EditRecord
+{
+    protected static string $resource = ConfigurationResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            ViewAction::make(),
+            DeleteAction::make(),
+        ];
+    }
+}

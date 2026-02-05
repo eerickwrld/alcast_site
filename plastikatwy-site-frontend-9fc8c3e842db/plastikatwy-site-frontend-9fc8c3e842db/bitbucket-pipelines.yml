@@ -1,0 +1,70 @@
+image: node:22
+
+definitions:
+  caches:
+    yarn: ~/.cache/yarn
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Testar SSH no pipeline
+          script:
+            - apt-get update && apt-get install -y openssh-client
+            - mkdir -p ~/.ssh
+            - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+            - chmod 600 ~/.ssh/id_rsa
+            - ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+            - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$EC2_USER@$EC2_HOST" "echo 'Conexão SSH OK!'"
+
+      - step:
+          name: Build Next.js com Node 22 + Yarn 1.22 (via Corepack)
+          caches:
+            - yarn
+          script:
+            # Ativar Corepack (já incluso no Node.js 22)
+            - corepack enable
+
+            # Preparar e ativar Yarn 1.22.22
+            - corepack prepare yarn@1.22.22 --activate
+
+            # Verificar versão
+            - yarn --version  # deve mostrar 1.22.22
+
+            # Instalar dependências e buildar
+            - yarn install --frozen-lockfile
+            - yarn build
+            - ls -la .next/
+
+          artifacts:
+            # Arquivos necessários para execução em produção
+            - .next/**
+            - public/**
+            - package.json
+            - next.config.mjs
+            #- .env.example  # opcional
+
+      - step:
+          name: Deploy com tar + scp
+          script:
+            - apt-get update && apt-get install -y openssh-client
+
+            - mkdir -p ~/.ssh
+            - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+            - chmod 600 ~/.ssh/id_rsa
+            - ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+
+            # Criar arquivo compactado com tudo necessário
+            - tar -czf deploy.tar.gz .next public package.json next.config.mjs
+
+            # Enviar
+            - scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy.tar.gz "$EC2_USER@$EC2_HOST:/tmp/deploy.tar.gz"
+
+            # Extrair e reiniciar
+            - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$EC2_USER@$EC2_HOST" "
+              cd /home/forge/frontend &&
+              tar -xzf /tmp/deploy.tar.gz -C . &&
+              rm /tmp/deploy.tar.gz &&
+              yarn install --production --frozen-lockfile &&
+              pm2 restart next-app || pm2 start yarn --name 'next-app' -- start
+              "

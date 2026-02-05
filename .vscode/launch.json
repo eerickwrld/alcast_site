@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Containers: Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node",
+            "node": {
+                "package": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php/package.json",
+                "localRoot": "${workspaceFolder}/plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3/vendor/ueberdosis/tiptap-php"
+            }
+        }
+    ]
+}

@@ -1,0 +1,330 @@
+{
+  "common": {
+	"newsletter": "¡Suscríbete a nuestro boletín y no te pierdas nuestro contenido!",
+	"button": "Suscribirse",
+	"newsletter_success_title": "¡Suscripción confirmada!",
+	"newsletter_success_message": "¡Tu correo electrónico ha sido agregado exitosamente a nuestro boletín!",
+	"newsletter_error_title": "Error de suscripción",
+	"newsletter_error_message": "No fue posible procesar tu suscripción. Inténtalo nuevamente.",
+	"newsletter_try_again": "Intentar nuevamente",
+	"newsletter_sending": "Enviando...",
+	"newsletter_email_required": "Ingresa un correo electrónico válido",
+	"solution": "¡Alcast tiene la solución ideal para tu sector!",
+	"budgetCta": "Solicita una cotización",
+	"products": "Productos",
+	"aluminumCta": "Aluminio ideal para tu sector",
+	"quote": "Solicitar un presupuesto",
+	"missao": "Misión",
+	"visao": "Visión",
+	"valores": "Valores",
+	"units": "Unidades",
+	"category": "Categoría",
+	"productSegments": "¿Dónde se utiliza este material?",
+	"notFoundArticles": "No se han encontrado artículos.",
+	"notFoundArticlesDescription": "¡Pronto tendremos nuevos contenidos!",
+	"articleByCategory": "Artículos del blog de Alcast por categoría",
+	"answeringTo": "Responding to the comment by {name}",
+	"cancel": "Cancelar",
+	"all": "Todos",
+	"errors": {
+	  "mandatory": "Campo es obligatorio."
+	},
+	"loading": "Cargando"
+  },
+  "home": {
+	"metadata": {
+	  "title": "",
+	  "description": ""
+	},
+	"hero": {
+	  "buttonText": "Saber más"
+	},
+	"products": {
+	  "title": "Nuestros productos",
+	  "subtitle": "Conoce nuestro portafolio completo de productos de aluminio"
+	},
+	"blog": {
+	  "title": "Blog y contenido informativo",
+	  "subtitle": "Mantente al día con las novedades de la industria del aluminio",
+	  "buttonText": "Accede a nuestro blog"
+	},
+	"segments": {
+	  "title": "Sectores",
+	  "subtitle": "Atendemos diversos sectores de la industria"
+	},
+	"certificates": {
+	  "title": "Somos una empresa certificada y comprometida con el medio ambiente"
+	},
+	"budget": {
+	  "title": "¡Usa aluminio en tu producción!",
+	  "buttonText": "Solicita una cotización"
+	}
+  },
+  "footer": {
+	"tagline": "Alcast es innovación y calidad en aluminio.",
+	"copyright": " Alcast. Todos los Derechos Reservados.",
+	"newsletter": {
+	  "title": "Suscríbete a nuestro boletín",
+	  "placeholder": "email@email.com",
+	  "button": "Suscribirse"
+	},
+	"navigation": {
+	  "title": "Navegación",
+	  "home": "Inicio",
+	  "about": "Sobre nosotros",
+	  "segments": "Sectores",
+	  "products": "Productos",
+	  "blog": "Blog",
+	  "quote": "Cotización"
+	},
+	"services": {
+	  "title": "Servicios",
+	  "privacy": "Política de privacidad",
+	  "invoice": "Segunda copia de factura PJ",
+	  "catalog": "Catálogo",
+	  "careers": "Trabaja con nosotros",
+	  "ethics": "Código de ética y conducta"
+	},
+	"contact": {
+	  "country": "Brasil",
+	  "city": "Francisco Beltrão/PR",
+	  "phone": "+55 46 3520.8888",
+	  "address1": "Estrada Municipal, Estr. Seção",
+	  "address2": "Jacaré, s/n - KM 05 - Zona Rural I",
+	  "address3": "Francisco Beltrão - PR, 85601-020"
+	},
+	"policies": {
+	  "quality": {
+		"title": "Política de calidad",
+		"description": "Lograr excelencia en nuestras acciones, con calidad, seguridad y rentabilidad. (En Alcast, la excelencia significa, entre otras prácticas, el compromiso total de cumplir con los requisitos aplicables y con la mejora continua del SGQ)."
+	  },
+	  "environmental": {
+		"title": "Política ambiental",
+		"description": "Ser reconocida a nivel nacional y por la comunidad en la que está inserta como una empresa comprometida con la protección del medio ambiente y la prevención de impactos ambientales negativos, garantizando la sostenibilidad y rentabilidad del negocio, cumpliendo con los requisitos legales y mejorando continuamente su sistema de gestión ambiental."
+	  }
+	}
+  },
+  "segments": {
+	"metadata": {
+	  "title": "Sectores | Alcast",
+	  "description": "Conoce los diversos sectores atendidos por Alcast, líder en el sector del aluminio."
+	},
+	"cta": {
+	  "title": "¡Alcast tiene la solución ideal para tu sector!",
+	  "button": "Solicita una cotización"
+	}
+  },
+  "blog": {
+	"metadata": {
+	  "title": "Blog | Alcast",
+	  "description": "¡El contenido más relevante de nuestra área!"
+	},
+	"comments": {
+	  "empty": "Aún no hay comentarios. ¡Sé el primero en comentar!",
+	  "loading": "Cargando comentarios...",
+	  "title": "Comentarios",
+	  "reply": "Responder",
+	  "show": "Mostrar ({count})",
+	  "hide_comments": "Ocultar respuestas",
+	  "input": "Escribe tu comentario...",
+	  "name": "Nombre (requerido)",
+	  "email": "Correo electrónico (no será público)",
+	  "buttonLoading": "Enviando...",
+	  "button": "Publicar comentario"
+	}
+  },
+  "contact": {
+	"metadata": {
+	  "title": "",
+	  "description": ""
+	},
+	"title": "Ponte en contacto mediante el formulario, redes sociales o dirección",
+	"privacy_policy": "Política de privacidad",
+	"privacy_content": "Puedes conocer más sobre cómo tratamos tus datos personales y tus derechos revisando nuestra",
+	"form": {
+	  "name": "Nombre",
+	  "email": "Correo electrónico",
+	  "phone": "Teléfono",
+	  "sector": "Departamento con el que deseas hablar",
+	  "submitting": "Enviando",
+	  "sectors": {
+		"placeholder": "Selecciona",
+		"comercial": "Comercial",
+		"finance": "Financiero",
+		"logistic": "Logística",
+		"marketing": "Marketing",
+		"others": "Otros",
+		"rh": "Recursos Humanos"
+	  },
+	  "newsletter": "¿Deseas recibir correos de Alcast sobre productos y servicios? Puedes cancelar tu suscripción en cualquier momento.",
+	  "message": "Mensaje",
+	  "yes": "Sí",
+	  "no": "No",
+	  "success": {
+        "title": "¡Mensaje enviado con éxito!",
+        "description": "Gracias por tu mensaje. Nuestro equipo lo revisará y responderá en breve."
+      },
+      "errors": {
+        "title": "Error al enviar el mensaje",
+        "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.",
+        "invalidPhone": "Número de teléfono inválido"
+      }
+	},
+	"button": "Enviar"
+  },
+  "budget": {
+	"metadata": {
+	  "title": "Cotización | Alcast",
+	  "description": "Haz tu cotización personalizada."
+	},
+	"products": {
+	  "bobinas": "Bobinas",
+	  "chapas-lisas": "Planchas Lisas",
+	  "chapas-lavradas": "Planchas Diamantadas",
+	  "discos-naturais": "Discos",
+	  "telha-trapezoidal": "Teja trapezoidal",
+	  "telha-ondulada": "Teja ondulada"
+	},
+	"fields": {
+	  "placeholder": "Ingresa el valor",
+	  "quantityWeight": "kg",
+	  "quantityUnits": "unidades",
+	  "quantity": "Cantidad",
+	  "weight": "Peso",
+	  "width": "Ancho",
+	  "length": "Largo",
+	  "diameter": "Diámetro",
+	  "outerDiameter": "Diámetro exterior",
+	  "thickness": "Espesor",
+	  "alloys": "Aleación",
+	  "alloy": "Aleación",
+	  "tempers": "Temple",
+	  "temper": "Temple",
+	  "measureType": "Cantidad especificada",
+	  "totalWidth": "Ancho total",
+	  "waveStep": "Paso de onda",
+	  "spaceUtilizationSimpleCoverage": "Espacio útil (Cobertura simple)",
+	  "spaceUtilizationDoubleCoverage": "Espacio útil (Cobertura doble)"
+	},
+	"product_selection": {
+	  "title": "1. Selecciona el producto"
+	},
+	"parameters": {
+	  "title": "2. Define los parámetros del producto",
+	  "empty": "Selecciona un producto para ver los parámetros."
+	},
+	"quantity": {
+	  "title": "3. Define la cantidad"
+	},
+	"resume": {
+	  "title": "Resumen de la cotización",
+	  "items": {
+		"title": "Ítems en la cotización:"
+	  },
+	  "userInformations": {
+		"title": "Tus datos para enviar la cotización",
+		"personalData": "Datos personales",
+		"companyData": "Datos de la empresa",
+		"clearButton": "Limpiar cotizaciones",
+		"submitButton": "Enviar cotización",
+		"errors": {
+		  "mandatory": "El campo {name} es obligatorio."
+		},
+		"fields": {
+		  "segments": {
+			"comercial": "Comercial",
+			"financeiro": "Financiero",
+			"logistica": "Logística",
+			"marketing": "Marketing",
+			"rh": "Recursos Humanos",
+			"outros": "Otros"
+		  },
+		  "placeholder": "Seleccionar",
+		  "primeiroNome": "Nombre",
+		  "sobreNome": "Apellido",
+		  "email": "Correo electrónico",
+		  "telefone": "Teléfono",
+		  "empresa": "Empresa",
+		  "segmento": "Sector",
+		  "uf": "Estado",
+		  "lgpdConsent": "Autorizo el uso de mis datos para recibir comunicaciones."
+		}
+	  },
+	  "actions": {
+		"add": {
+		  "feedback": {
+			"error": "No hay artículos en el presupuesto para enviar. Agregue al menos un producto.",
+			"success": "¡Artículo agregado al presupuesto con éxito!"
+		  }
+		},
+		"clear": {
+		  "confirmation": "¿Está seguro de que desea eliminar este artículo?",
+		  "feedback": {
+			"success": "¡Artículo eliminado con éxito!",
+			"error": "Producto no encontrado. Inténtelo de nuevo."
+		  }
+		},
+		"clearAll": {
+		  "confirmation": "¿Está seguro de que desea limpiar todos los presupuestos?",
+		  "feedback": {
+			"success": "Todos los artículos han sido eliminados del presupuesto."
+		  }
+		},
+		"submit": {
+		  "feedback": {
+			"success": "¡Presupuesto enviado con éxito! Gracias por su solicitud.",
+			"error": "Error al enviar el presupuesto. Inténtelo de nuevo."
+		  }
+		}
+	  }
+	}
+  },
+  "aboutUs": {
+	"metadata": {
+	  "title": "Sobre nosotros | Alcast",
+	  "description": "Conoce la historia, misión, visión y valores de Alcast, líder en el sector del aluminio."
+	}
+  },
+  "esg": {
+	"metadata": {
+	  "title": "ESG | Alcast",
+	  "description": "Conoce las iniciativas de sostenibilidad y responsabilidad social de Alcast."
+	}
+  },
+  "lme": {
+	"metadata": {
+	  "title": "LME - London Metal Exchange | Alcast",
+	  "description": "Sigue diariamente las cotizaciones de los metales en la LME (London Metal Exchange) y del dólar."
+	}
+  },
+  "products": {
+	"metadata": {
+	  "title": "Bobinas de Aluminio | Alcast",
+	  "description": "Bobinas de aluminio producidas mediante proceso de colada continua y laminado en frío, con un ancho final de hasta 1350 mm."
+	},
+	"chapas-lavradas": {
+	  "metadata": {
+		"title": "Planchas Estampadas de Aluminio | Alcast",
+		"description": "Planchas de aluminio estampadas en relieve con característica antideslizante, ideales para escaleras, pisos y rampas."
+	  }
+	},
+	"chapas-lisas": {
+	  "metadata": {
+		"title": "Planchas Lisas de Aluminio | Alcast",
+		"description": "Planchas lisas de aluminio con garantía de planicidad y espesor, producidas con acabado natural."
+	  }
+	},
+	"discos-naturais": {
+	  "metadata": {
+		"title": "Discos Naturales de Aluminio | Alcast",
+		"description": "Discos de aluminio para la fabricación de utensilios domésticos, producidos mediante un proceso moderno que garantiza propiedades mecánicas."
+	  }
+	},
+	"telhas": {
+	  "metadata": {
+		"title": "Tejas de Aluminio | Alcast",
+		"description": "Tejas de aluminio ligeras y duraderas, con excelente reflectividad térmica y resistencia a la corrosión para cubiertas de larga vida útil."
+	  }
+	}
+  }
+}
