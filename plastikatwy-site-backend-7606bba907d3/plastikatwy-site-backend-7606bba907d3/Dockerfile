@@ -44,4 +44,4 @@ RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 EXPOSE 8000
 
 # Comando de inicialização
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
