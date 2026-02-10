@@ -1,17 +1,13 @@
 <?php
 
 return [
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', '*'],
     
     'allowed_methods' => ['*'],
     
-    'allowed_origins' => [
-        env('FRONTEND_URL', 'https://alcast-site-yjjm.vercel.app'),
-    ],
+    'allowed_origins' => ['*'],
     
-    'allowed_origins_patterns' => [
-        '#^https://.*\.vercel\.app$#',
-    ],
+    'allowed_origins_patterns' => [],
     
     'allowed_headers' => ['*'],
     
