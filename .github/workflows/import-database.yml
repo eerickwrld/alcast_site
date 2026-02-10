@@ -1,0 +1,40 @@
+name: Import Database to Railway
+
+on:
+  workflow_dispatch: # Permite executar manualmente
+
+jobs:
+  import-db:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install MySQL Client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mysql-client
+
+      - name: Import SQL dump to Railway
+        env:
+          MYSQL_HOST: ${{ secrets.RAILWAY_MYSQL_HOST }}
+          MYSQL_PORT: ${{ secrets.RAILWAY_MYSQL_PORT }}
+          MYSQL_USER: ${{ secrets.RAILWAY_MYSQL_USER }}
+          MYSQL_PASSWORD: ${{ secrets.RAILWAY_MYSQL_PASSWORD }}
+          MYSQL_DATABASE: ${{ secrets.RAILWAY_MYSQL_DATABASE }}
+        run: |
+          echo "🔄 Conectando ao banco Railway..."
+          mysql -h $MYSQL_HOST -P $MYSQL_PORT -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE < dump-alcast-202510291447.sql
+          echo "✅ Importação concluída com sucesso!"
+
+      - name: Verify import
+        env:
+          MYSQL_HOST: ${{ secrets.RAILWAY_MYSQL_HOST }}
+          MYSQL_PORT: ${{ secrets.RAILWAY_MYSQL_PORT }}
+          MYSQL_USER: ${{ secrets.RAILWAY_MYSQL_USER }}
+          MYSQL_PASSWORD: ${{ secrets.RAILWAY_MYSQL_PASSWORD }}
+          MYSQL_DATABASE: ${{ secrets.RAILWAY_MYSQL_DATABASE }}
+        run: |
+          echo "🔍 Verificando tabelas importadas..."
+          mysql -h $MYSQL_HOST -P $MYSQL_PORT -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE -e "SHOW TABLES;"
