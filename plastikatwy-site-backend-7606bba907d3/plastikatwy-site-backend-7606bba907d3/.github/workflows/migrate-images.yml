@@ -16,5 +16,6 @@ jobs:
           extensions: curl, pdo_mysql
       
       - name: Run migration
-        run: php migrate-images.php
-        working-directory: ./plastikatwy-site-backend-7606bba907d3/plastikatwy-site-backend-7606bba907d3
+        run: |
+          cd plastikatwy-site-backend-7606bba907d3
+          php migrate-images.php
