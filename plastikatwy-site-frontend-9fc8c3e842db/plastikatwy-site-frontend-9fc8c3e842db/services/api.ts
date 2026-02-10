@@ -1,7 +1,6 @@
 import {BlogPost, BlogResponse, BlogCategory, PageResponse, Segment, ConfigData} from './types';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.alcast.com.br';
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://energetic-love-production.up.railway.app/api';
 /**
  * Busca os dados de uma página específica pelo slug
  * @param slug - O slug da página a ser buscada
