@@ -12,32 +12,58 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $products = QueryBuilder::for(Product::class)
-            ->when($request->has('limit'), fn($query) => $query->limit($request->limit))
-            ->get();
+        try {
+            $products = QueryBuilder::for(Product::class)
+                ->when($request->has('limit'), fn($query) => $query->limit($request->limit))
+                ->get();
 
-        foreach ($products as $product) {
-            $product->banner = $product->getUrlBanner();
-            $product->images_product_use = $product->getImagesForUse();
-            $product->image = $product->getUrlImage();
+            // Se não há produtos, retorna array vazio
+            if ($products->isEmpty()) {
+                return response()->json([]);
+            }
+
+            foreach ($products as $product) {
+                try {
+                    $product->banner = $product->getUrlBanner();
+                    $product->images_product_use = $product->getImagesForUse();
+                    $product->image = $product->getUrlImage();
+                } catch (\Exception $e) {
+                    // Se der erro ao processar um produto específico, continua
+                    \Log::warning("Erro ao processar produto {$product->id}: " . $e->getMessage());
+                }
+            }
+
+            return response()->json($products);
+            
+        } catch (\Exception $e) {
+            // Log do erro
+            \Log::error('Erro ao buscar produtos: ' . $e->getMessage());
+            
+            // Retorna array vazio ao invés de erro 500
+            return response()->json([]);
         }
-
-        return response()->json($products);
     }
 
     public function show(string $language, string $slug)
     {
-        $product = Product::whereJsonContainsLocale('slug', $language, $slug)->first();
+        try {
+            $product = Product::whereJsonContainsLocale('slug', $language, $slug)->first();
 
-        $product->load('segments');
+            // Se não encontrou o produto
+            if (!$product) {
+                return response()->json(['error' => 'Produto não encontrado'], 404);
+            }
 
-        $product->images_product_use = $product->getImagesForUse();
-        $product->banner = $product->getUrlBanner();
-        $product->image = $product->getUrlImage();
+            $product->load('segments');
+            $product->images_product_use = $product->getImagesForUse();
+            $product->banner = $product->getUrlBanner();
+            $product->image = $product->getUrlImage();
 
-
-        return response()->json($product);
+            return response()->json($product);
+            
+        } catch (\Exception $e) {
+            \Log::error('Erro ao buscar produto: ' . $e->getMessage());
+            return response()->json(['error' => 'Erro ao buscar produto'], 500);
+        }
     }
-
-
 }
