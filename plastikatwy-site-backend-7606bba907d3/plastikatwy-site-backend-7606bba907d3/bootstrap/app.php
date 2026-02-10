@@ -12,10 +12,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // CORS - DEVE VIR PRIMEIRO para funcionar em todas as rotas
-        $middleware->use([
-            \App\Http\Middleware\Cors::class,
-        ]);
+        // CORS - USAR PREPEND para ser o PRIMEIRO middleware
+        $middleware->prepend(\App\Http\Middleware\Cors::class);
         
         $middleware->api(prepend: [
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
