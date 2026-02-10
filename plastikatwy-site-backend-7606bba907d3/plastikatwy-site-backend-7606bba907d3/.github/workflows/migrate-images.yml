@@ -1,0 +1,21 @@
+name: Migrate Images to Cloudinary
+
+on:
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: curl, pdo_mysql
+      
+      - name: Run migration
+        run: |
+          cd plastikatwy-site-backend-7606bba907d3
+          php migrate-images.php
