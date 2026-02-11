@@ -43,23 +43,41 @@ class Product extends Model implements Auditable
 
     public function getUrlImage(): string
     {
-        return Storage::disk('public')->url($this->image);
+        return $this->getCloudinaryUrl($this->image);
     }
 
     public function getUrlBanner(): string
     {
-        return Storage::disk('public')->url($this->banner);
+        return $this->getCloudinaryUrl($this->banner);
     }
 
     public function getImagesForUse()
     {
         $images = [];
-
         foreach ($this->images_product_use as $image) {
-            $images[] = Storage::disk('public')->url($image['images_product_use']);
+            $images[] = $this->getCloudinaryUrl($image['images_product_use']);
+        }
+        return $images;
+    }
+
+    private function getCloudinaryUrl($filename): string
+    {
+        if (empty($filename)) {
+            return '';
         }
 
-        return $images;
+        $cloudName = env('CLOUDINARY_CLOUD_NAME', 'dtdzvmniu');
+        
+        // Extrair apenas o nome do arquivo (sem path)
+        $basename = basename($filename);
+        
+        // Remover extensão
+        $pathInfo = pathinfo($basename);
+        $publicId = $pathInfo['filename'];
+        $extension = $pathInfo['extension'] ?? 'jpg';
+        
+        // Retornar URL do Cloudinary
+        return "https://res.cloudinary.com/{$cloudName}/image/upload/{$publicId}.{$extension}";
     }
 
     public function segments(): BelongsToMany
