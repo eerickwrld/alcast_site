@@ -8,7 +8,6 @@
     "require": {
         "php": "^8.2",
         "abdulmajeed-jamaan/filament-translatable-tabs": "^4.0",
-        "cloudinary-labs/cloudinary-laravel": "^2.0",
         "filament/filament": "^4.0",
         "lara-zeus/sky": "^4.0",
       
