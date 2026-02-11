@@ -41,24 +41,24 @@ class Product extends Model implements Auditable
         //
     }
 
-    public function getUrlImage(): string
-    {
-        return $this->getCloudinaryUrl($this->image);
-    }
+   public function getUrlImage(): string
+{
+    return $this->image ?? '';
+}
 
-    public function getUrlBanner(): string
-    {
-        return $this->getCloudinaryUrl($this->banner);
-    }
+public function getUrlBanner(): string
+{
+    return $this->banner ?? '';
+}
 
-    public function getImagesForUse()
-    {
-        $images = [];
-        foreach ($this->images_product_use as $image) {
-            $images[] = $this->getCloudinaryUrl($image['images_product_use']);
-        }
-        return $images;
+public function getImagesForUse(): array
+{
+    $images = [];
+    foreach (($this->images_product_use ?? []) as $image) {
+        $images[] = $image['images_product_use'] ?? '';
     }
+    return $images;
+}
 
     private function getCloudinaryUrl($filename): string
     {
