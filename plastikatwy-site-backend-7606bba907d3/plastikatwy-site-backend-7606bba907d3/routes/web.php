@@ -1,11 +1,11 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect('admin');
+    return view('welcome');
 });
-use Illuminate\Http\Request;
 
 Route::get('/upload-images', function() {
     return view('upload-images');
