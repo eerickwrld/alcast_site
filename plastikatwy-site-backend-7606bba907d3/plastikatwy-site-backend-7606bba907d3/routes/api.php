@@ -73,3 +73,16 @@ Route::group(['prefix' => 'budget'], function () {
 Route::group(['prefix' => 'contact'], function () {
     Route::post('/', [App\Http\Controllers\Api\ContactController::class, 'store']);
 });
+Route::get('/fix-images', function() {
+    $count = \DB::table('products')
+        ->where('image', 'like', '%energetic-love%')
+        ->update([
+            'image' => \DB::raw("REPLACE(image, 'https://energetic-love-production.up.railway.app/storage/', 'http://159.89.230.73/storage/')")
+        ]);
+    
+    return response()->json([
+        'success' => true,
+        'produtos_atualizados' => $count,
+        'mensagem' => 'URLs das imagens atualizadas!'
+    ]);
+});
