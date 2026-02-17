@@ -86,3 +86,12 @@ Route::get('/fix-images', function() {
         'mensagem' => 'URLs das imagens atualizadas!'
     ]);
 });
+Route::get('/check-images', function() {
+    $products = \DB::table('products')
+        ->whereNotNull('image')
+        ->where('image', '!=', '')
+        ->select('id', 'image')
+        ->get();
+    
+    return response()->json($products);
+});
