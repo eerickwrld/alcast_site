@@ -95,3 +95,26 @@ Route::get('/check-images', function() {
     
     return response()->json($products);
 });
+Route::get('/fix-images-v2', function() {
+    $products = \DB::table('products')
+        ->whereNotNull('image')
+        ->where('image', '!=', '')
+        ->whereNot('image', 'like', 'http%')
+        ->get();
+
+    $count = 0;
+    foreach ($products as $product) {
+        \DB::table('products')
+            ->where('id', $product->id)
+            ->update([
+                'image' => 'http://159.89.230.73/storage/' . $product->image
+            ]);
+        $count++;
+    }
+
+    return response()->json([
+        'success' => true,
+        'produtos_atualizados' => $count,
+        'mensagem' => 'URLs completas adicionadas!'
+    ]);
+});
