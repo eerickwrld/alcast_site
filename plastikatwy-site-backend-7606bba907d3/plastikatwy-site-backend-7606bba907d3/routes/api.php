@@ -118,3 +118,44 @@ Route::get('/fix-images-v2', function() {
         'mensagem' => 'URLs completas adicionadas!'
     ]);
 });
+// ========================================
+// ROTA PARA SINCRONIZAR IMAGENS DO CLOUDINARY
+// ========================================
+Route::get('/sync-cloudinary', function() {
+    $cloudName = 'dtdzvmniu';
+    $folderPath = 'products';
+    
+    $products = \DB::table('products')
+        ->whereNotNull('image')
+        ->where('image', '!=', '')
+        ->get();
+
+    $count = 0;
+    $updated = [];
+    
+    foreach ($products as $product) {
+        // Pega apenas o nome do arquivo (remove qualquer URL antiga)
+        $filename = basename($product->image);
+        
+        // Monta URL do Cloudinary
+        $cloudinaryUrl = "https://res.cloudinary.com/{$cloudName}/image/upload/{$folderPath}/{$filename}";
+        
+        \DB::table('products')
+            ->where('id', $product->id)
+            ->update(['image' => $cloudinaryUrl]);
+        
+        $updated[] = [
+            'id' => $product->id,
+            'arquivo' => $filename,
+            'nova_url' => $cloudinaryUrl
+        ];
+        
+        $count++;
+    }
+
+    return response()->json([
+        'success' => true,
+        'total_atualizado' => $count,
+        'produtos' => $updated
+    ]);
+});
